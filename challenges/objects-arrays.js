@@ -12,50 +12,41 @@
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 
-//Dinosaur Class //
 
-class Dinosaur {
-  consructor(ds){
-    this.name = ds.name;
-    this.diet = ds.diet;
-    this.weight = ds.weight;
-    this.length = ds.length;
-    this.period = ds.period;
-  }
-  roar() {
-    return `RAWERSRARARWERSARARARRRR!`;
-  }
-}
+//MY 3 OBJECTS//
 
 // tyrannosaurus object //
 
-const tyrannosaurus = new Dinosaur({
+const tyrannosaurus = {
   name: 'tyrannosaurus',
   diet: 'carnivorous',
   weight: '7000kg',
   length: '12m',
   period: 'Late Cretaceous',
-})
+  "roar": function () {
+    return "RAWERSRARARWERSARARARRRR!";
+  }
+};
 
 //stegosaurus object //
 
-const stegosaurus = new Dinosaur({
+const stegosaurus = {
   name: 'stegosaurus',
   diet: 'herbivorous',
   weight: '2000kg',
   length: '9m',
   period: 'Late Jurassic',
-})
+};
 
 //velociraptor object//
 
-const velociraptor = new Dinosaur({
+const velociraptor = {
   name: 'velociraptor',
   diet: 'carnivorous',
   weight: '15kg',
   length: '1.8m',
   period: 'Late Cretaceous',
-})
+};
 
 
 // Using your dinosaur objects, log answers to these questions:
