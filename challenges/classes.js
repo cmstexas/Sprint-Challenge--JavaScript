@@ -23,7 +23,7 @@ surfaceArea(){
 }
 }
 
-//STRETCH NEW CHILD CLASS//
+//STRETCH CHILD CLASS//
 
 class CubeMaker extends CuboidMaker {
     constructor (cuattr) {
@@ -39,6 +39,7 @@ newSurfaceArea(){
 }
 }
 
+//NEW OBJECTS//
 
 const cuboid = new CuboidMaker ({
     length: 4,
