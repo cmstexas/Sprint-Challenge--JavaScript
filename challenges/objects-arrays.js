@@ -207,12 +207,14 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 let populationTotal = [];
-populationTotal = zooAnimals.reduce((object, item) => object + item.population, 0);
-populationTotal += zooAnimals.length;
+const add = (acc, population) =>
+  {return acc + population;}
+zooAnimals.forEach(function (object) {
+  populationTotal.push(object.population)})
+populationTotal = populationTotal.reduce(add)
+
 
 console.log(populationTotal);
-
-
 
 
 // Stretch: If you haven't already, convert your array method callbacks into arrow functions.
