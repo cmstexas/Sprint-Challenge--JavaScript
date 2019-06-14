@@ -23,8 +23,31 @@ surfaceArea(){
 }
 }
 
+//STRETCH NEW CHILD CLASS//
+
+class CubeMaker extends CuboidMaker {
+    constructor (cuattr) {
+    super(cuattr);
+}
+
+newVolume(){
+    return this.length * this.length * this.length;
+}
+
+newSurfaceArea(){
+    return 6 * (this.length * this.length * this.length * this.length * this.length * this.length);
+}
+}
+
+
 const cuboid = new CuboidMaker ({
     length: 4,
+    width: 5,
+    height: 5,
+  })
+
+  const cube = new CubeMaker ({
+    length: 5,
     width: 5,
     height: 5,
   })
@@ -34,6 +57,8 @@ const cuboid = new CuboidMaker ({
   // Test your volume and surfaceArea methods by uncommenting the logs below:
   console.log(cuboid.volume()); // 100
   console.log(cuboid.surfaceArea()); // 130
-  
+  console.log(cube.newVolume());  // 125  (length*3)
+  console.log(cube.surfaceArea()); //150 (6*lengthsquared)
+   
   
   
