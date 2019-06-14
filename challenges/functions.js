@@ -7,20 +7,12 @@
   * In the body of the function return the callback with the two parameters that you created
 */
 
-const items = ['Pizza', 'Burger', 'Shake', 'Salad'];
-
-
   //Given this problem: 
   
   function consume(item1, item2, cb) {
-    function consume(item1, item2, cb) {
-      return cb(aitem1[0], item2[1]);
+      return cb(item1, item2);
     }
-  }
-
-  consume(items, function(consume) {
-     console.log(first);
-  
+    
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -29,23 +21,44 @@ const items = ['Pizza', 'Burger', 'Shake', 'Salad'];
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
-function sumNums(num1, num2, cb) {
-  let result = (num1 + num2);
-  cb(result);
+function add(num1, num2) {
+  return num1 + num2;
 }
 
-function multiplyNums(num1, num2, cb) {
-  let result = (num1 * num2);
-  cb(result);
+function multiply(num1, num2) {
+  return num1 * num2;
 }
 
-function greeting(fname, lname, cb) {
-  let result = (`Hello ${fname} ${lname}, nice to meet you!');
-  cb(result);
+function greeting (firstName, lastName) {
+  return `Hello ${firstName} ${lastName}, nice to meet you!`;
 }
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-consume(2,2,add); // 4
-consume(10,16,multiply); // 160
-consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2,2,add)); // 4
+console.log(consume(10,16,multiply)); // 160
+console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+
+
+// ==== Closures ==== 
+
+// Explain in your own words why `nestedfunction()` can access the variable `internal`.
+
+// ANSWER: nestedFunction is outside the function that contains the variable "internal." Usually, this means it would not have access to this internal variable. This case is different because we've used a closure - this means that we've defined a function within another function, giving us access to the outer function (myFunction) and its variables (internal)
+
+// // Explanation: 
+
+
+// const external = "I'm outside the function";
+
+// function myFunction() {
+//   console.log(external);
+//   const internal = "Hello! I'm inside myFunction!";
+
+//   function nestedFunction() {
+//     console.log(internal);
+//   };
+//   nestedFunction();
+// }
+// myFunction();
+  

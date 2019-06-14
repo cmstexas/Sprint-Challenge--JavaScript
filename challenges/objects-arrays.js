@@ -94,7 +94,6 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array.  
 
-
 Once you have the new array created, sort the universities alphabetically and log the result. 
 
 const universities = [];
@@ -140,9 +139,16 @@ const contactInfo = [];
     })
 
 
-/* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
+/* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. const uni = [];
+ */
 
 const uni = [];
+for (let i = 0; i < graduates.length; i++) {
+  if (graduates[i].university.includes('Uni')) {
+  uni.push(graduates[i].university);
+  }
+};
+
 console.log(uni);
 
 
@@ -193,7 +199,8 @@ console.log(lowerCase);
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const lowerPopulation = zooAnimals.filter(population => population < 5);
+
+lowerPopulation = zooAnimals.filter (population => (zooAnimals.population < 5)); 
 
 console.log(lowerPopulation);
 
@@ -210,12 +217,6 @@ console.log(populationTotal);
 
 
 
-// let donerAverage = [];
-// donerAverage = runners.reduce((object, item) => object + item.donation, 0);
-// donerAverage /= runners.length;
-
-// console.log(Math.round(donerAverage));
-// /* 
 
 // Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
